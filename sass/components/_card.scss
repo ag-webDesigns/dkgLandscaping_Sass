@@ -1,0 +1,83 @@
+@use "../abstracts/variables";
+
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  // height: $service-card-height;
+  height: 60rem;
+
+  &__side {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    transition: all 0.8s;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba(variables.$color-black, .2);
+
+    &--back {
+
+      height: 100%;
+      text-align: center;
+      transform: rotateY(180deg);
+
+      &--1 {
+        background-image: linear-gradient(to top right, variables.$color-primary, variables.$color-primary-light);
+      }
+
+      &--2 {
+        background-image: linear-gradient(to top right, variables.$color-red-dark, variables.$color-red);
+      }
+
+    }
+  }
+
+  &__photo {
+    width: 100%;
+    background-size: cover;
+    background-blend-mode: screen;
+    height: 40.5rem;
+    display: block;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+
+    &--1 {
+      background-image: linear-gradient(to top right, variables.$color-primary-dark, variables.$color-primary), url(../images/service-garden.jpg);
+    }
+
+    &--2 {
+      background-image: linear-gradient(to top right, variables.$color-brown-red, variables.$color-red-dark), url(../images/service-structure.jpg);
+    }
+  }
+
+  &__list {
+    padding: 8rem;
+
+    ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+
+      li {
+        font-size: 2.5rem;
+        color: variables.$color-white;
+        padding: 1.5rem 0;
+
+      }
+    }
+  }
+
+
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+}

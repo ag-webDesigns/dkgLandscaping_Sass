@@ -1,0 +1,42 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
+.image-stack {
+  position: relative;
+  height: 40rem;
+  @include mixins.clearfix;
+
+  &__photo {
+    position: absolute;
+    width: 55%;
+    box-shadow: 0 1.5rem 4rem rgba(variables.$color-black, .4);
+    border-radius: 3px;
+    z-index: 10;
+    transition: all 0.2s;
+
+    &--1 {
+      left: 0;
+      top: -2px;
+    }
+
+    &--2 {
+      top: 6rem;
+      left: 25%;
+      // transform: translate(-50%, 0);
+    }
+
+    &--3 {
+      right: 0;
+      top: 12rem;
+    }
+
+    &:hover {
+      transform: scale(1.1) translateY(-.5rem);
+      box-shadow: 0 2.5rem 4rem rgba(variables.$color-black, .4);
+      z-index: 20;
+    }
+  }
+  &:hover &__photo:not(:hover) {
+    transform: scale(.9);
+  }
+}

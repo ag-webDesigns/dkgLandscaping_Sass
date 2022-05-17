@@ -4,18 +4,60 @@
   padding: 10rem 0;
   // background-color: $color-brown-red;
   background-image: linear-gradient(variables.$color-brown, variables.$color-brown-red);
+  color: variables.$color-primary-light;
 
   &__logo-box {
     // display: inline-block;
     margin: 0 auto;
-    width: 8rem;
-    height: 8rem;
+    width: 12rem;
+    // height: 8rem;
     border-radius: 50%;
     box-shadow: 0 1rem 3rem rgba(variables.$color-black, .4);
   }
 
   &__logo-image {
     width: 100%;
+
+  }
+
+  &__social {
+    text-align: center;
+    padding-top: 2.5rem;
+    border-top: 1px solid variables.$color-primary-light;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__social-icon {
+    font-size: 3rem;
+    cursor: pointer;
+    // color: variables.$color-primary-light;
+  }
+
+  &__contact {
+    text-align: right;
+
+    &--link {
+      &:link,
+      &:visited {
+        text-decoration: none;
+        color: variables.$color-primary-light;
+        font-size: 1.6rem;
+        display: block;
+        &:not(:last-child) {
+          margin-bottom: 1.5rem;
+        }
+      }
+    }
+
+    &--icon {
+      margin-right: 1.6rem;
+    }
+
+    &--address {
+      // color: variables.$color-white;
+      font-size: 1.4rem;
+    }
 
   }
 }

@@ -7,7 +7,7 @@
   }
 
   &__button {
-    background-color: v.$color-primary-light;
+    background-image: linear-gradient(to bottom right, v.$color-white, v.$color-primary-light);
     height: 6rem;
     width: 6rem;
     text-align: center;

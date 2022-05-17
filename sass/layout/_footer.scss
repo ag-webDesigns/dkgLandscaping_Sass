@@ -1,0 +1,21 @@
+@use "../abstracts/variables";
+
+.footer {
+  padding: 10rem 0;
+  // background-color: $color-brown-red;
+  background-image: linear-gradient(variables.$color-brown, variables.$color-brown-red);
+
+  &__logo-box {
+    // display: inline-block;
+    margin: 0 auto;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    box-shadow: 0 1rem 3rem rgba(variables.$color-black, .4);
+  }
+
+  &__logo-image {
+    width: 100%;
+
+  }
+}

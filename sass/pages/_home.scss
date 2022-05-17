@@ -1,0 +1,55 @@
+@use "../abstracts/variables";
+
+.home-top {
+  height: 100vh;
+  padding: variables.$container-padding;
+  background-image:
+  linear-gradient(45deg,
+  rgba(variables.$color-primary-dark, 0.5) 3%,
+  rgba(variables.$color-primary-dark, 0.5) 100%),
+  url(../images/full-angel.jpg);
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
+  position: relative;
+
+  &__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+}
+
+.main-title {
+  backface-visibility: hidden;
+  margin-bottom: 6rem;
+  animation: moveUpText 1s ease-in-out;
+}
+
+.home-about {
+  // padding: 10rem 0 12rem;
+  padding: 15rem 0;
+}
+
+.specialties {
+  background-image: linear-gradient(to top right, rgba(variables.$color-primary-dark, .75), rgba(variables.$color-primary, .75)),
+  url(../images/full-bricks.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 15rem 0;
+}
+
+.services {
+  padding: 15rem 0;
+}
+
+.values {
+  padding: 24rem 0;
+  background-image: linear-gradient(to top right, rgba(variables.$color-white, .8), rgba(variables.$color-white, .4)), url(../images/septic-mound.jpg);
+  background-size: cover;
+  background-position: center;
+
+}

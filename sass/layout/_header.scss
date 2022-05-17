@@ -1,0 +1,20 @@
+@use "../abstracts/variables";
+
+.header {
+  width: 100%;
+  padding: 3rem variables.$container-padding;
+  position: absolute;
+  z-index: 5;
+
+  &__logo-box {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    box-shadow: 0 1rem 3rem rgba(variables.$color-black, .4);
+  }
+
+  &__logo {
+    width: 100%;
+    // @include center-element;
+  }
+}

@@ -374,6 +374,12 @@ body {
   .card__list {
     padding: 2rem;
   }
+  .card:hover .card__side--front {
+    transform: rotateY(0);
+  }
+  .card:hover .card__side--back {
+    transform: rotateY(0);
+  }
 }
 
 .form__group:not(:last-child) {

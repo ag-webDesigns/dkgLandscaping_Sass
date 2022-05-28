@@ -103,6 +103,14 @@ box-shadow: 0 1.5rem 4rem rgba(variables.$color-black, .2);
     &__list {
       padding: 2rem;
     }
+
+    &:hover &__side--front {
+      transform: rotateY(0);
+    }
+
+    &:hover &__side--back {
+      transform: rotateY(0);
+    }
   }
 
 }

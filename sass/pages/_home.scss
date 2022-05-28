@@ -1,3 +1,4 @@
+@use "../abstracts/mixins";
 @use "../abstracts/variables";
 
 .home-top {
@@ -12,6 +13,10 @@
   background-position: center;
   clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
   position: relative;
+
+  @include mixins.respond(phone) {
+    clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+  }
 
   &__text-box {
     position: absolute;
@@ -29,25 +34,15 @@
   animation: moveUpText 1s ease-in-out;
 }
 
-.home-about {
-  // padding: 10rem 0 12rem;
-  padding: 15rem 0;
-}
-
 .specialties {
   background-image: linear-gradient(to top right, rgba(variables.$color-primary-dark, .75), rgba(variables.$color-primary, .75)),
   url(../images/full-bricks.jpg);
   background-size: cover;
   background-position: center;
-  padding: 15rem 0;
-}
 
-.services {
-  padding: 15rem 0;
 }
 
 .values {
-  padding: 24rem 0;
   background-image: linear-gradient(to top right, rgba(variables.$color-white, .8), rgba(variables.$color-white, .4)), url(../images/septic-mound.jpg);
   background-size: cover;
   background-position: center;

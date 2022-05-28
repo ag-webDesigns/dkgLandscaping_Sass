@@ -4,9 +4,14 @@
 .row {
   max-width: variables.$grid-width;
   margin: 0 auto;
+  padding: 0 3rem;
 
   &:not(:last-child) {
     margin-bottom: variables.$gutter-vertical;
+
+    @include mixins.respond(phone) {
+      margin-bottom: 3rem;
+    }
   }
 
   @include mixins.clearfix;
@@ -15,6 +20,12 @@
     float: left;
     &:not(:last-child) {
       margin-right: variables.$gutter-horizontal;
+    }
+
+    @include mixins.respond(phone) {
+      width: 100% !important;
+      margin-right: 0;
+      margin-bottom: 3rem;
     }
   }
 

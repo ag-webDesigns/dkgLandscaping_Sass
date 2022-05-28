@@ -7,13 +7,13 @@
   }
 
   &__button {
-    background-image: linear-gradient(to bottom right, v.$color-white, v.$color-primary-light);
+    background-image: linear-gradient(to bottom right, v.$color-brown, v.$color-brown-red);
     height: 6rem;
     width: 6rem;
     text-align: center;
     position: fixed;
-    top: 6rem;
-    right: 6rem;
+    top: 3rem;
+    right: 3rem;
     border-radius: 50%;
     z-index: 2000;
     box-shadow: 0 1rem 3rem rgba(v.$color-black, .1);
@@ -25,9 +25,9 @@
     width: 5rem;
     border-radius: 50%;
     position: fixed;
-    top: 6.5rem;
-    right: 6.5rem;
-    background-image: radial-gradient(v.$color-brown, v.$color-brown-red);
+    top: 3.5rem;
+    right: 3.5rem;
+    background-image: radial-gradient(v.$color-primary-light, v.$color-primary);
     z-index: 1000;
     transition: transform 0.8s ease-in-out;
     // transform: scale(80);
@@ -65,7 +65,7 @@
       color: v.$color-white;
       text-decoration: none;
       text-transform: uppercase;
-      background-image: linear-gradient(to top right, v.$color-primary-light 0%, v.$color-white 70%);
+      background-image: linear-gradient(to top right, v.$color-orange 0%, v.$color-white 70%);
       -webkit-background-clip: text;
       color: transparent;
       background-size: 500%;
@@ -98,7 +98,7 @@
     &::before {
       width: 3rem;
       height: 2px;
-      background-color: v.$color-brown;
+      background-color: v.$color-grey-dark-2;
       display: inline-block;
     }
 

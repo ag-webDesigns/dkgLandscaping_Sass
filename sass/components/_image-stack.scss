@@ -36,7 +36,31 @@
       z-index: 20;
     }
   }
+
   &:hover &__photo:not(:hover) {
     transform: scale(.9);
+  }
+  @include mixins.respond(phone) {
+    height: auto;
+
+    &__photo {
+      position: relative;
+      width: 70%;
+      top: 0;
+      box-shadow: 0 1rem 2rem rgba(variables.$color-black, .4);
+
+      &--1 {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      &--2 {
+        right: 0;
+      }
+
+      &--3 {
+        left: 0;
+      }
+    }
   }
 }

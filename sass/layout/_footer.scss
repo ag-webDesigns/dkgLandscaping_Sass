@@ -1,7 +1,7 @@
 @use "../abstracts/variables";
 
 .footer {
-  padding: 10rem 0;
+  padding: 5rem 0;
   // background-color: $color-brown-red;
   background-image: linear-gradient(variables.$color-brown, variables.$color-brown-red);
   color: variables.$color-primary-light;
@@ -9,7 +9,7 @@
   &__logo-box {
     // display: inline-block;
     margin: 0 auto;
-    width: 12rem;
+    width: 6rem;
     // height: 8rem;
     border-radius: 50%;
     box-shadow: 0 1rem 3rem rgba(variables.$color-black, .4);
@@ -23,19 +23,22 @@
   &__social {
     text-align: center;
     padding-top: 2.5rem;
-    border-top: 1px solid variables.$color-primary-light;
+    // border-top: 1px solid variables.$color-primary-light;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
   }
 
   &__social-icon {
     font-size: 3rem;
     cursor: pointer;
-    // color: variables.$color-primary-light;
+
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+    }
   }
 
   &__contact {
-    text-align: right;
+    text-align: center;
 
     &--link {
       &:link,
@@ -44,9 +47,6 @@
         color: variables.$color-primary-light;
         font-size: 1.6rem;
         display: block;
-        &:not(:last-child) {
-          margin-bottom: 1.5rem;
-        }
       }
     }
 

@@ -1,3 +1,4 @@
+@use "../abstracts/mixins" as m;
 @use "../abstracts/variables" as v;
 
 .form {
@@ -16,6 +17,10 @@
     border-bottom: 3px solid transparent;
     width: 90%;
     display: block;
+
+    @include m.respond(tab-port) {
+      width: 100%;
+    }
 
     &:focus {
       outline: none;
@@ -50,6 +55,12 @@
   &__radio-group {
     width: 49%;
     display: inline-block;
+
+    @include m.respond(phone) {
+      display: block;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
   }
 
   &__radio-input {
